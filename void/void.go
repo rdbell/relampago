@@ -1,6 +1,6 @@
 package void
 
-import rp "github.com/lnbits/relampago"
+import rp "github.com/rdbell/relampago"
 
 type VoidWallet struct{}
 

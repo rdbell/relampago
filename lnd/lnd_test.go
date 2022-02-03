@@ -6,9 +6,9 @@ import (
 	"testing"
 	"time"
 
-	rp "github.com/lnbits/relampago"
 	"github.com/lightningnetwork/lnd/lnrpc"
 	"github.com/lightningnetwork/lnd/lnrpc/routerrpc"
+	rp "github.com/rdbell/relampago"
 	"google.golang.org/grpc"
 )
 

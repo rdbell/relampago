@@ -1,4 +1,4 @@
-PKG := github.com/lnbits/relampago
+PKG := github.com/rdbell/relampago
 
 GOBUILD := GO111MODULE=on go build -v
 

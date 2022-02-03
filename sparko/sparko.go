@@ -10,8 +10,8 @@ import (
 
 	lightning "github.com/fiatjaf/lightningd-gjson-rpc"
 	decodepay "github.com/fiatjaf/ln-decodepay"
-	rp "github.com/lnbits/relampago"
 	sse "github.com/r3labs/sse/v2"
+	rp "github.com/rdbell/relampago"
 	"github.com/tidwall/gjson"
 )
 

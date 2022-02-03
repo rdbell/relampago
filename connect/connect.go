@@ -6,10 +6,10 @@ import (
 	"time"
 
 	"github.com/kelseyhightower/envconfig"
-	"github.com/lnbits/relampago"
-	"github.com/lnbits/relampago/lnd"
-	"github.com/lnbits/relampago/sparko"
-	"github.com/lnbits/relampago/void"
+	"github.com/rdbell/relampago"
+	"github.com/rdbell/relampago/lnd"
+	"github.com/rdbell/relampago/sparko"
+	"github.com/rdbell/relampago/void"
 )
 
 type LightningBackendSettings struct {

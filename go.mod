@@ -1,4 +1,4 @@
-module github.com/lnbits/relampago
+module github.com/rdbell/relampago
 
 go 1.16
 
