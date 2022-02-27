@@ -1,11 +1,9 @@
 package relampago_connect
 
 import (
-	"fmt"
 	"strconv"
 	"time"
 
-	"github.com/kelseyhightower/envconfig"
 	"github.com/rdbell/relampago"
 	"github.com/rdbell/relampago/lnd"
 	"github.com/rdbell/relampago/sparko"
@@ -24,13 +22,7 @@ type LightningBackendSettings struct {
 	LNDMacaroonPath string `envconfig:"LND_MACAROON_PATH" json:"lnd_macaroon_path"`
 }
 
-func Connect() (relampago.Wallet, error) {
-	var lbs LightningBackendSettings
-	err := envconfig.Process("", &lbs)
-	if err != nil {
-		return nil, fmt.Errorf("failed to process envconfig: %w", err)
-	}
-
+func Connect(lbs LightningBackendSettings) (relampago.Wallet, error) {
 	connectTimeout, err := strconv.Atoi(lbs.ConnectTimeout)
 	if err != nil {
 		return nil, err
