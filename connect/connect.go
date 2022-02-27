@@ -13,15 +13,15 @@ import (
 )
 
 type LightningBackendSettings struct {
-	BackendType    string `envconfig:"LIGHTNING_BACKEND_TYPE"`
-	ConnectTimeout string `envconfig:"LIGHTNING_CONNECT_TIMEOUT" default:"15"`
+	BackendType    string `envconfig:"LIGHTNING_BACKEND_TYPE" json:"lightning_backend_type"`
+	ConnectTimeout string `envconfig:"LIGHTNING_CONNECT_TIMEOUT" json:"lightning_connect_timeout" default:"15"`
 
-	SparkoURL   string `envconfig:"SPARKO_URL"`
-	SparkoToken string `envconfig:"SPARKO_TOKEN"`
+	SparkoURL   string `envconfig:"SPARKO_URL" json:"sparko_url"`
+	SparkoToken string `envconfig:"SPARKO_TOKEN" json:"sparko_token"`
 
-	LNDHost         string `envconfig:"LND_HOST"`
-	LNDCertPath     string `envconfig:"LND_CERT_PATH"`
-	LNDMacaroonPath string `envconfig:"LND_MACAROON_PATH"`
+	LNDHost         string `envconfig:"LND_HOST" json:"lnd_host"`
+	LNDCertPath     string `envconfig:"LND_CERT_PATH" json:"lnd_cert_path"`
+	LNDMacaroonPath string `envconfig:"LND_MACAROON_PATH" json:"lnd_macaroon_path"`
 }
 
 func Connect() (relampago.Wallet, error) {
